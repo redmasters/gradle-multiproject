@@ -1,2 +1,2 @@
 rootProject.name = "gradle-multiproject"
-include("app")
+include("app", "model", "service")

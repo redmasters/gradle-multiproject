@@ -1,14 +1,11 @@
 plugins {
-    java
-    id("org.springframework.boot") version "2.6.4"
+    alias(libs.plugins.spring.boot)
+    id("io.red.maxirail.common-conventions")
 }
-
-
-repositories {
-    mavenCentral()
-}
-
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web:2.6.4")
+    implementation(project(":service"))
+    implementation(libs.spring.boot.web)
+
+    testImplementation(libs.spring.boot.test)
 }
